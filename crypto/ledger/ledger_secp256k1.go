@@ -34,7 +34,7 @@ type (
 		// Returns a compressed pubkey and bech32 address (requires user confirmation)
 		GetAddressPubKeySECP256K1([]uint32, string) ([]byte, string, error)
 		// Signs a message (requires user confirmation)
-		SignSECP256K1([]uint32, []byte) ([]byte, error)
+		SignSECP256K1([]uint32, []byte, byte) ([]byte, error)
 	}
 
 	// PrivKeyLedgerSecp256k1 implements PrivKey, calling the ledger nano we
