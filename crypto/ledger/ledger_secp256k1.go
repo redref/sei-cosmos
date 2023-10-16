@@ -218,7 +218,7 @@ func sign(device SECP256K1, pkl PrivKeyLedgerSecp256k1, msg []byte) ([]byte, err
 		return nil, err
 	}
 
-	var a byte = '0'
+	var a byte = 0
 	sig, err := device.SignSECP256K1(pkl.Path.DerivationPath(), msg, a)
 	if err != nil {
 		return nil, err
